@@ -2,7 +2,7 @@ module.exports = {
   env: {
     es6: true,
     browser: true,
-    node: true,
+    node: true
   },
   extends: [
     './standard',
@@ -10,7 +10,7 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
-    'plugin:markdown/recommended',
+    'plugin:markdown/recommended'
   ],
   ignorePatterns: [
     '*.min.*',
@@ -27,17 +27,17 @@ module.exports = {
     '__snapshots__',
     '!.github',
     '!.vitepress',
-    '!.vscode',
+    '!.vscode'
   ],
   plugins: [
     'html',
     'unicorn',
-    'antfu',
+    'antfu'
   ],
   settings: {
     'import/resolver': {
-      node: { extensions: ['.js', '.mjs'] },
-    },
+      node: { extensions: ['.js', '.mjs'] }
+    }
   },
   overrides: [
     {
@@ -52,15 +52,15 @@ module.exports = {
         'jsonc/no-octal-escape': 'error',
         'jsonc/object-curly-newline': ['error', { multiline: true, consistent: true }],
         'jsonc/object-curly-spacing': ['error', 'always'],
-        'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
-      },
+        'jsonc/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }]
+      }
     },
     {
       files: ['*.yaml', '*.yml'],
       parser: 'yaml-eslint-parser',
       rules: {
-        'spaced-comment': 'off',
-      },
+        'spaced-comment': 'off'
+      }
     },
     {
       files: ['package.json'],
@@ -99,39 +99,39 @@ module.exports = {
               'devDependencies',
               'husky',
               'lint-staged',
-              'eslintConfig',
-            ],
+              'eslintConfig'
+            ]
           },
           {
             pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
-            order: { type: 'asc' },
-          },
-        ],
-      },
+            order: { type: 'asc' }
+          }
+        ]
+      }
     },
     {
       files: ['*.d.ts'],
       rules: {
-        'import/no-duplicates': 'off',
-      },
+        'import/no-duplicates': 'off'
+      }
     },
     {
       files: ['*.js'],
       rules: {
-        '@typescript-eslint/no-var-requires': 'off',
-      },
+        '@typescript-eslint/no-var-requires': 'off'
+      }
     },
     {
       files: ['scripts/**/*.*', 'cli.*'],
       rules: {
-        'no-console': 'off',
-      },
+        'no-console': 'off'
+      }
     },
     {
       files: ['*.test.ts', '*.test.js', '*.spec.ts', '*.spec.js'],
       rules: {
-        'no-unused-expressions': 'off',
-      },
+        'no-unused-expressions': 'off'
+      }
     },
     {
       // Code blocks in markdown file
@@ -148,9 +148,9 @@ module.exports = {
         'no-restricted-imports': 'off',
         'no-undef': 'off',
         'no-unused-expressions': 'off',
-        'no-unused-vars': 'off',
-      },
-    },
+        'no-unused-vars': 'off'
+      }
+    }
   ],
   rules: {
     // import
@@ -173,7 +173,7 @@ module.exports = {
     'camelcase': 'off',
     'comma-spacing': ['error', { before: false, after: true }],
     'comma-style': ['error', 'last'],
-    'comma-dangle': ['error', 'always-multiline'],
+    'comma-dangle': ['error', 'never'],
     'no-constant-condition': 'warn',
     'no-debugger': 'error',
     'no-console': ['error', { allow: ['warn', 'error'] }],
@@ -185,7 +185,7 @@ module.exports = {
       'error',
       'DebuggerStatement',
       'LabeledStatement',
-      'WithStatement',
+      'WithStatement'
     ],
     'object-curly-spacing': ['error', 'always'],
     'no-return-await': 'off',
@@ -194,8 +194,8 @@ module.exports = {
       {
         anonymous: 'always',
         named: 'never',
-        asyncArrow: 'always',
-      },
+        asyncArrow: 'always'
+      }
     ],
     'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 1 }],
 
@@ -205,23 +205,23 @@ module.exports = {
       'error',
       {
         destructuring: 'any',
-        ignoreReadBeforeAssign: true,
-      },
+        ignoreReadBeforeAssign: true
+      }
     ],
     'prefer-arrow-callback': [
       'error',
       {
         allowNamedFunctions: false,
-        allowUnboundThis: true,
-      },
+        allowUnboundThis: true
+      }
     ],
     'object-shorthand': [
       'error',
       'always',
       {
         ignoreConstructors: false,
-        avoidQuotes: true,
-      },
+        avoidQuotes: true
+      }
     ],
     'prefer-exponentiation-operator': 'error',
     'prefer-rest-params': 'error',
@@ -233,13 +233,13 @@ module.exports = {
     'spaced-comment': ['error', 'always', {
       line: {
         markers: ['/'],
-        exceptions: ['/', '#'],
+        exceptions: ['/', '#']
       },
       block: {
         markers: ['!'],
         exceptions: ['*'],
-        balanced: true,
-      },
+        balanced: true
+      }
     }],
 
     // best-practice
@@ -298,8 +298,8 @@ module.exports = {
         ignoreDeclarationSort: true,
         ignoreMemberSort: false,
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        allowSeparatedGroups: false,
-      },
+        allowSeparatedGroups: false
+      }
     ],
 
     // yml
@@ -308,7 +308,7 @@ module.exports = {
 
     // antfu
     'antfu/if-newline': 'error',
-    'antfu/import-dedupe': 'error',
+    'antfu/import-dedupe': 'error'
     // 'antfu/prefer-inline-type-import': 'error',
-  },
+  }
 }

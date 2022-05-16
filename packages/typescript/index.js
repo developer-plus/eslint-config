@@ -5,12 +5,12 @@ module.exports = {
   extends: [
     '@developer-plus/eslint-config-basic',
     'plugin:import/typescript',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended'
   ],
   settings: {
     'import/resolver': {
-      node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
-    },
+      node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] }
+    }
   },
   overrides: basic.overrides,
   rules: {
@@ -59,9 +59,9 @@ module.exports = {
         'JSXText',
         'JSXEmptyExpression',
         'JSXSpreadChild',
-        'TSTypeParameterInstantiation',
+        'TSTypeParameterInstantiation'
       ],
-      offsetTernaryExpressions: true,
+      offsetTernaryExpressions: true
     }],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
@@ -72,7 +72,7 @@ module.exports = {
     'brace-style': 'off',
     '@typescript-eslint/brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
     'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+    '@typescript-eslint/comma-dangle': ['error', 'never'],
     'object-curly-spacing': 'off',
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
     'semi': 'off',
@@ -87,8 +87,8 @@ module.exports = {
       {
         anonymous: 'always',
         named: 'never',
-        asyncArrow: 'always',
-      },
+        asyncArrow: 'always'
+      }
     ],
     'space-infix-ops': 'off',
     '@typescript-eslint/space-infix-ops': 'error',
@@ -126,6 +126,6 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-namespace': 'off',
-    '@typescript-eslint/triple-slash-reference': 'off',
-  },
+    '@typescript-eslint/triple-slash-reference': 'off'
+  }
 }
