@@ -1,0 +1,27 @@
+{
+  "name": "@developer-plus/eslint-config-ts",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "developer-plus",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=3.9"
+  },
+  "dependencies": {
+    "@antfu/eslint-config-basic": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0"
+  }
+}
